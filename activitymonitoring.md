@@ -126,32 +126,10 @@ Median steps taken each day
 Time Series plot of total number of steps without imputing Missing Values
 =========================================================================
 
-    library(plotly)
+    library(ggplot2)
+    ggplot(dailystepsmissing, aes(Var1, Freq)) + geom_line()+ xlab("Date") + ylab("Daily Steps")
 
-    ## 
-    ## Attaching package: 'plotly'
-
-    ## The following object is masked from 'package:ggplot2':
-    ## 
-    ##     last_plot
-
-    ## The following object is masked from 'package:stats':
-    ## 
-    ##     filter
-
-    ## The following object is masked from 'package:graphics':
-    ## 
-    ##     layout
-
-    p1 <- plot_ly(x = dailystepsmissing$Var1, y = dailystepsmissing$Freq, mode = 'lines') %>%
-      layout(
-        title = "Histogram of daily Steps with Missing Values"
-      ) 
-    show(p1)
-
-    ## No trace type specified:
-    ##   Based on info supplied, a 'scatter' trace seems appropriate.
-    ##   Read more about this trace type -> https://plot.ly/r/reference/#scatter
+![](activitymonitoring_files/figure-markdown_strict/unnamed-chunk-8-1.png)
 
 5 minute interval that contains maximum number of steps each day
 ================================================================
