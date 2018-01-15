@@ -108,7 +108,7 @@ ggplot(dailysteps, aes(x = dailysteps$Var1, y = dailysteps$Freq)) +
 #Panel Plot containing average number of steps taken per 5-minute interval across weekdays and weekends
 
 #Create a function to separate weekedays and weekends
-``````{r, echo = TRUE }
+```{r, echo = TRUE }
 separation <- function(date) {
   if (weekdays(as.Date(date)) %in% c("Saturday", "Sunday")) {
     "weekend"
