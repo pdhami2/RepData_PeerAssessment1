@@ -2,7 +2,7 @@
 title: "Activity Monitoring Analysis"
 author: "Priyanka Dhamija"
 date: "January 14, 2018"
-output: html_document
+output: md_document
 ---
 
 #Read the data
